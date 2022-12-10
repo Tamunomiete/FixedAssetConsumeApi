@@ -1,0 +1,42 @@
+﻿@model IEnumerable<FixedAssetConsumeApi.Models.TblFaCategoryEntity>
+
+@{
+	ViewData["Title"] = "Fixed Asset Class";
+}
+
+<br />
+<a href="@Url.Action("AddFacategory","FaCategory")" class="btn btn-primary btn-sm">Add Category</a>
+
+<table class="table table-success table-striped-columns table-hover">
+	<thead>
+		<tr>
+			<th>@Html.DisplayName("Id")</th>
+			<th>@Html.DisplayName("CatCode")</th>
+			<th>@Html.DisplayName("CatDesc")</th>
+			<th>@Html.DisplayName("status")</th>
+			<th>@Html.DisplayName("UserID")</th>
+			<th>@Html.DisplayName("AuthID")</th>
+			<th>@Html.DisplayName("Action")</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in @Model)
+		{
+			<tr>
+				<td>@item.Id</td>
+				<td>@item.CatCode</td>
+				<td>@item.CatDesc</td>
+				<td>@item.Status</td>
+				<td>@item.UserId</td>
+				<td>@item.AuthId</td>
+				<td>
+					<a>@Html.ActionLink("Edit","EditFacategory","Facategory",new{id=item.Id},null)</a>
+					&nbsp;&nbsp;	@Html.ActionLink("Delete","Delete","Facategory",new{id=item.Id},null)
+				</td>
+
+
+			</tr>
+		}
+	</tbody>
+</table>
+

@@ -1,0 +1,51 @@
+﻿
+@model IEnumerable<FixedAssetConsumeApi.Models.TblFaClassEntity>
+
+@{
+	ViewData["Title"] = "Fixed Asset Class";
+}
+
+<br />
+<a href="@Url.Action("AddFaclass","Faclass")" class="btn btn-primary btn-sm">Add Class</a>
+
+<table class="table table-success table-striped-columns table-hover">
+	<thead>
+		<tr>
+			<th>@Html.DisplayName("Id")</th>
+			<th>@Html.DisplayName("CatCode")</th>
+			<th>@Html.DisplayName("ClassCode")</th>
+			<th>@Html.DisplayName("ClassName")</th>
+			<th>@Html.DisplayName("DepMethod")</th>
+			<th>@Html.DisplayName("DepRate")</th>
+			<th>@Html.DisplayName("LifeSpan")</th>
+			<th>@Html.DisplayName("status")</th>
+			<th>@Html.DisplayName("UserID")</th>
+			<th>@Html.DisplayName("AuthID")</th>
+			<th>@Html.DisplayName("Action")</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in @Model)
+		{
+			<tr>
+				<td>@item.Id</td>
+				<td>@item.CatCode</td>
+				<td>@item.ClassCode</td>
+				<td>@item.ClassName</td>
+				<td>@item.DepMethod</td>
+				<td>@item.DepRate</td>
+				<td>@item.LifeSpan</td>
+				<td>@item.Status</td>
+				<td>@item.UserId</td>
+				<td>@item.AuthId</td>
+				<td>
+					<a>@Html.ActionLink("Edit","EditFaclass","Faclass",new{id=item.Id},null)</a>
+				&nbsp;&nbsp;	@Html.ActionLink("Delete","Delete","Faclass",new{id=item.Id},null)
+				</td>
+					
+				
+			</tr>
+		}
+	</tbody>
+</table>
+

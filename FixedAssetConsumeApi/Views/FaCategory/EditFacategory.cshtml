@@ -1,0 +1,52 @@
+﻿@model FixedAssetConsumeApi.Models.TblFaCategoryEntity
+
+@{
+	ViewData["Title"] = "EditFacategory";
+}
+
+<h1>EditFacategory</h1>
+
+<h4>TblFaclassEntity</h4>
+<hr />
+@using (Html.BeginForm("Update", "Facategory", FormMethod.Post, new { }))
+{
+	<table style="width:100%" class="table table-dark table-hover">
+
+		<tr>
+			<td>
+			</td>
+			<td>
+				@Html.HiddenFor(model=>model.Id)
+			</td>
+		</tr>
+
+		<tr class="table-info">
+			<td>CatCode</td>
+			<td>@Html.TextBoxFor(model=>model.CatCode)</td>
+		</tr>
+		<tr class="table-warning">
+			<td>CatDesc</td>
+			<td>@Html.TextBoxFor(model=>model.CatDesc)</td>
+		</tr>
+		
+		<tr class="table-warning">
+			<td>Status</td>
+			<td>@Html.TextBoxFor(model=>model.Status)</td>
+		</tr>
+		<tr class="table-primary">
+			<td>UserId</td>
+			<td>@Html.TextBoxFor(model=>model.UserId)</td>
+		</tr>
+		<tr class="table-info">
+			<td>AuthId</td>
+			<td>@Html.TextBoxFor(model=>model.AuthId)</td>
+		</tr>
+
+		<div class="form-group">
+			<input type="submit" value="Update" name="Update" class="btn btn-primary" />
+
+		</div>
+
+	</table>
+}
+

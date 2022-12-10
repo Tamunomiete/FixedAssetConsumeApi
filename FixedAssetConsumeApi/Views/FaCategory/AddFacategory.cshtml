@@ -1,0 +1,45 @@
+﻿@model FixedAssetConsumeApi.Models.TblFaCategoryEntity
+
+@{
+	ViewData["Title"] = "Add Fixed Category";
+}
+
+<h1>Add Fixed Asset Category</h1>
+<h4>Fixed Asset Entity</h4>
+
+<hr />
+<div class="row">
+	<div class="col-md-4">
+		<form asp-action="AddFacategory">
+			<div class="">
+				<label asp-for="CatCode"></label>
+				<input asp-for="CatCode" class="form-control" />
+			</div>
+			<div class="form-group">
+				<label asp-for="CatDesc"></label>
+				<input asp-for="CatDesc " class="form-control" />
+
+			</div>
+			
+			<div class="form-group">
+				<label asp-for="Status"></label>
+				<input asp-for="Status " class="form-control" />
+
+			</div>
+			<div class="form-group">
+				<label asp-for="UserId"></label>
+				<input asp-for="UserId" class="form-control" />
+
+			</div>
+			<div class="form-group">
+				<label asp-for="AuthId"></label>
+				<input asp-for="AuthId" class="form-control" />
+
+			</div>
+			<div class="form-group">
+				<input type="submit" value="Create" class="btn btn-primary" />
+
+			</div>
+		</form>
+	</div>
+</div>

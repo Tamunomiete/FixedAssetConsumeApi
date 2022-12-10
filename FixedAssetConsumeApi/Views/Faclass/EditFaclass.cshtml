@@ -1,0 +1,70 @@
+﻿@model FixedAssetConsumeApi.Models.TblFaClassEntity
+
+@{
+	ViewData["Title"] = "EditFaclass";
+}
+
+<h1>EditFaclass</h1>
+
+<h4>TblFaclassEntity</h4>
+<hr />
+@using (Html.BeginForm("Update", "Faclass", FormMethod.Post, new { }))
+{
+	<table style="width:100%" class="table table-dark table-hover">
+		
+		<tr>
+			<td>
+
+			</td>
+			<td>
+				@Html.HiddenFor(model=>model.Id)
+			</td>
+		</tr>
+
+		<tr class="table-info">
+			<td>CatCode</td>
+			<td>@Html.TextBoxFor(model=>model.CatCode)</td>
+		</tr>
+		<tr class="table-warning">
+			<td>ClassCode</td>
+			<td>@Html.TextBoxFor(model=>model.ClassCode)</td>
+		</tr>
+		<tr class="table-primary">
+			<td>ClassName</td>
+			<td>@Html.TextBoxFor(model=>model.ClassName)</td>
+		</tr>
+		<tr class="table-info">
+			<td>DepMethod</td>
+			<td>@Html.TextBoxFor(model=>model.DepMethod)</td>
+		</tr>
+		<tr class="table-danger">
+			<td>Dep.Rate</td>
+			<td>@Html.TextBoxFor(model=>model.DepRate)</td>
+		</tr>
+		<tr class="table-primary">
+			<td>LifeSpan</td>
+			<td>@Html.TextBoxFor(model=>model.LifeSpan)</td>
+		</tr>
+		<tr class="table-warning">
+			<td>Status</td>
+			<td>@Html.TextBoxFor(model=>model.Status)</td>
+		</tr>
+		<tr class="table-primary">
+			<td>UserId</td>
+			<td>@Html.TextBoxFor(model=>model.UserId)</td>
+		</tr>
+		<tr class="table-info">
+			<td>AuthId</td>
+			<td>@Html.TextBoxFor(model=>model.AuthId)</td>
+		</tr>
+		
+		<tr>
+			<td>
+				<input type="submit" value="Update" name="Update"/>
+			</td>
+		</tr>
+
+
+	</table>
+}
+
